@@ -349,7 +349,7 @@ img.card-img-top.girar {
 }
  .target-image{
   /* width: 85%; */
-  height: 70px;
+  height: 60px;
   border-radius: 10px;
   border-style: solid;
   border-width: 1px;
@@ -362,12 +362,14 @@ img.card-img-top.girar {
 .tam2{
   margin-right: 1px;
 }
-.space{
-  
+
+body{
+  overflow-y: hidden;
 }
 
 img {
    width:100%;
     max-width:400px;
+  
 }
 </style>
