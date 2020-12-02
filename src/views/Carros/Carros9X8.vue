@@ -43,7 +43,7 @@
                       :class="{ girar: imagen.mostrar }"
                       :src="imagen.mostrar ? imagen.ruta : NOMBRE_IMAGEN_OCULTA"
                   
-                      class="target-image"
+                      class="target-image6"
                     />
                   </div>
                 </div>
@@ -157,11 +157,21 @@ export default {
     },
     // Mostrar alerta de victoria y reiniciar juego
     indicarVictoria() {
+       var resultado = this.aciertos;
+      var intentos = this.intentos;
       Swal.fire({
         title: "¡Ganaste!",
-        html: `
-                <img class="img-fluid" src="./img/ganaste.png" alt="Ganaste">
-                <p class="h4">Muy bien hecho</p>`,
+           html: `
+                <img class="img-fluid" src="https://image.freepik.com/vector-gratis/copa-ganadores-oro_1284-18399.jpg" alt="Ganaste">
+                <p class="h4">Muy bien hecho</p> Puntos:${resultado}
+                <br>
+                Intentos:${intentos}
+                <br>
+                <a href="/carros">
+<img class="imagen" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Home_Icon.svg/768px-Home_Icon.svg.png"   alt="">
+
+</a>
+                `,
         confirmButtonText: "Jugar de nuevo",
         allowOutsideClick: false,
         allowEscapeKey: false,
@@ -347,7 +357,7 @@ export default {
 img.card-img-top.girar {
     animation: fadein 2s;
 }
- .target-image{
+ .target-image6{
   /* width: 85%; */
   height: 60px;
   border-radius: 10px;
@@ -355,7 +365,10 @@ img.card-img-top.girar {
   border-width: 1px;
   border-color: black;
 } 
-
+.imagen{
+  width: 50px;
+  height: 50px;
+}
 #ditanciadere {
   padding: 1px;
 }
